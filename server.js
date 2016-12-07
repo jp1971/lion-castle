@@ -116,7 +116,7 @@ slapp.message('.*', ['direct_mention', 'direct_message'], (msg) => {
 slapp.command('/inorout', /^in/, (msg) => {
   // `respond` is used for actions or commands and uses the `response_url` provided by the
   // incoming request from Slack
-  msg.respond(`Glad you are in ${match}!`)
+  msg.respond(`Glad you are in!`)
 })
 
 // attach Slapp to express server
