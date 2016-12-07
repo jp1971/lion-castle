@@ -113,11 +113,18 @@ slapp.message('.*', ['direct_mention', 'direct_message'], (msg) => {
   }
 })
 
-slapp.command('/inorout', '#(.*)', (msg, number, answer) => {
+slapp.command('/choose', '(.*)', (msg, number, answer) => {
   // `respond` is used for actions or commands and uses the `response_url` provided by the
   // incoming request from Slack
   msg.respond(answer)
 })
+
+slapp.command('/namo', (msg) => {
+  // `respond` is used for actions or commands and uses the `response_url` provided by the
+  // incoming request from Slack
+  msg.respond('rulez all skoolz!')
+})
+
 
 // attach Slapp to express server
 var server = slapp.attachToExpress(express())
