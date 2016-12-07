@@ -116,7 +116,7 @@ slapp.message('.*', ['direct_mention', 'direct_message'], (msg) => {
 slapp.command('/choose', '(.*)', (msg, choice) => {
   // `respond` is used for actions or commands and uses the `response_url` provided by the
   // incoming request from Slack
-  msg.respond(answer)
+  msg.respond(choice)
 })
 
 slapp.command('/jamo', (msg) => {
