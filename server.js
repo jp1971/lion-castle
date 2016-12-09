@@ -21,11 +21,8 @@ slapp.message('start', ['mention', 'direct_message'], (msg) => {
   msg.say(rules.start_text)
 })
 
-slapp.message('^read .*', ['mention', 'direct_message'], (msg, text, type, entry) => {
-  // text = 'play artist spotify:track:1yJiE307EBIzOB9kqH1deb'
-  // type = 'artist'
-  // toplay = 'spotify:track:1yJiE307EBIzOB9kqH1deb'
-  msg.say('You want to read ${entry}')
+slapp.message('^read (.*)', ['mention', 'direct_message'], (msg, text, type, entry) => {
+  msg.say(text + type + entry)
 })
 
 slapp.message('^play (song|artist) <([^>]+)>', (msg, text, type, toplay) => {
