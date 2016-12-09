@@ -21,8 +21,12 @@ slapp.message('start', ['mention', 'direct_message'], (msg) => {
   msg.say(rules.start_text)
 })
 
-slapp.message('^read (.*)', ['mention', 'direct_message'], (msg, text, entry) => {
-  msg.say(text + ' ' + entry)
+slapp.message('^read (.*)', ['mention', 'direct_message'], (msg, text, entry, entry) => {
+  var resp = ''
+  if (entry='r1') {
+    resp=rules.r1_text
+  }
+  msg.say(resp)
 })
 
 slapp.message('^play (song|artist) <([^>]+)>', (msg, text, type, toplay) => {
