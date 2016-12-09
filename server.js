@@ -33,7 +33,7 @@ slapp.message('^play (song|artist) <([^>]+)>', (msg, text, type, toplay) => {
   // type = 'artist'
   // toplay = 'spotify:track:1yJiE307EBIzOB9kqH1deb'
   msg.say(toplay)
-}
+})
 
 // var HELP_TEXT = `
 // I will respond to the following messages:
