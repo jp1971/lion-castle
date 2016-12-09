@@ -21,6 +21,13 @@ slapp.message('start', ['mention', 'direct_message'], (msg) => {
   msg.say(rules.start_text)
 })
 
+slapp.message('^read <([^>]+)>', (msg, text, entry) => {
+  // text = 'play artist spotify:track:1yJiE307EBIzOB9kqH1deb'
+  // type = 'artist'
+  // toplay = 'spotify:track:1yJiE307EBIzOB9kqH1deb'
+  msg.say('You want to read ${entry}')
+}
+
 // var HELP_TEXT = `
 // I will respond to the following messages:
 // \`help\` - to see this message.
