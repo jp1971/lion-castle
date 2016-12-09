@@ -23,10 +23,18 @@ slapp.message('start', ['mention', 'direct_message'], (msg) => {
 
 slapp.message('^read (.*)', ['mention', 'direct_message'], (msg, text, entry ) => {
   var resp = ''
-  if (entry == 'r1') {
-    resp = rules.r1_text
+  switch(entry) {
+    case 'r1':
+      resp = rules.r1_text
+      break;
+    case 'r2':
+      resp = rules.r2_text
+      break;
+    default:
+      'Entry ${entry} not found'
   }
-  msg.say(rules.r1_text)
+  
+  msg.say(resp)
 })
 
 // var HELP_TEXT = `
