@@ -26,7 +26,7 @@ slapp.message('^read <([^>]+)>', (msg, text, entry) => {
   // type = 'artist'
   // toplay = 'spotify:track:1yJiE307EBIzOB9kqH1deb'
   msg.say('You want to read ${entry}')
-}
+})
 
 // var HELP_TEXT = `
 // I will respond to the following messages:
