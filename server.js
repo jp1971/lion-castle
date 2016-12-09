@@ -26,7 +26,7 @@ slapp.message('^read (.*)', ['mention', 'direct_message'], (msg, text, entry ) =
   if (entry == 'r1') {
     resp = rules.r1_text
   }
-  msg.say(resp)
+  msg.say(entry + ' ' + rules.r1_text)
 })
 
 slapp.message('^play (song|artist) <([^>]+)>', (msg, text, type, toplay) => {
