@@ -1,5 +1,5 @@
 var start_text = `
-Read all of the \"R\" rules entries before starting the adventure. To get started, type \`Read R1\`.
+Read all of the "R" rules entries before starting the adventure. To get started, type \`read r1\`.
 `
 
 var r1_text = `

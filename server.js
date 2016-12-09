@@ -18,7 +18,7 @@ var slapp = Slapp({
 })
 
 slapp.message('start', ['mention', 'direct_message'], (msg) => {
-  msg.say(rules.r1_text)
+  msg.say(rules.start_text)
 })
 
 slapp.message('^read (.*)', ['mention', 'direct_message'], (msg, text, entry ) => {
@@ -26,14 +26,7 @@ slapp.message('^read (.*)', ['mention', 'direct_message'], (msg, text, entry ) =
   if (entry == 'r1') {
     resp = rules.r1_text
   }
-  msg.say(entry + ' ' + rules.r1_text)
-})
-
-slapp.message('^play (song|artist) <([^>]+)>', (msg, text, type, toplay) => {
-  // text = 'play artist spotify:track:1yJiE307EBIzOB9kqH1deb'
-  // type = 'artist'
-  // toplay = 'spotify:track:1yJiE307EBIzOB9kqH1deb'
-  msg.say(toplay)
+  msg.say(rules.r1_text)
 })
 
 // var HELP_TEXT = `
