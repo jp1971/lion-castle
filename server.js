@@ -31,7 +31,7 @@ slapp.message('^read (.*)', ['mention', 'direct_message'], (msg, text, entry ) =
       resp = rules.r2_text
       break;
     default:
-      'Entry ${entry} not found'
+      resp = 'Entry ${entry} not found'
   }
   
   msg.say(resp)
