@@ -21,7 +21,7 @@ slapp.message('start', ['mention', 'direct_message'], (msg) => {
   msg.say(rules.start_text)
 })
 
-slapp.message('^read (.*)', ['mention', 'direct_message'], (msg, text, entry, entry) => {
+slapp.message('^read (.*)', ['mention', 'direct_message'], (msg, text, entry) => {
   var resp = ''
   if (entry='r1') {
     resp=rules.r1_text
