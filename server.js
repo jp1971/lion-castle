@@ -17,16 +17,24 @@ var slapp = Slapp({
   context: Context()
 })
 
-slapp.message('set', ['mention', 'direct_message'], (msg) => {
-  let id = 'test_id'
-  let state = {
+  var test_id = 'test_id'
+  var test_state = {
     foo: 'bar'
   }
-  slapp.set(id, state, () => {
+  slapp.convo_store.set(test_id, test_state, () => {
     //error callback
   })
-  msg.say('test_id set')
-})
+
+// slapp.message('set', ['mention', 'direct_message'], (msg) => {
+//   let id = 'test_id'
+//   let state = {
+//     foo: 'bar'
+//   }
+//   slapp.set(id, state, () => {
+//     //error callback
+//   })
+//   msg.say('test_id set')
+// })
 
 slapp.message('start', ['mention', 'direct_message'], (msg) => {
   msg.say(rules.start_text)
