@@ -22,7 +22,7 @@ slapp.message('set', ['mention', 'direct_message'], (msg) => {
   let state = {
     foo: 'bar'
   }
-  slapp.convo_store.set(id, state, () => {
+  convo_store.set(id, state, () => {
     //error callback
   })
   msg.say('test_id set')
