@@ -17,6 +17,17 @@ var slapp = Slapp({
   context: Context()
 })
 
+slapp.message('set', ['mention', 'direct_message'], (msg) => {
+  let id = 'test_id'
+  let state = {
+    foo: 'bar'
+  }
+  slapp.convo_store.set(id, state () => {
+    //error callback
+  })
+  msg.say('test_id set')
+})
+
 slapp.message('start', ['mention', 'direct_message'], (msg) => {
   msg.say(rules.start_text)
 })
